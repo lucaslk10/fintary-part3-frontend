@@ -12,6 +12,7 @@ This project implements a matching system designed to align orders with transact
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
 - **ESLint**: A static code analysis tool for identifying problematic patterns in JavaScript code.
 - **Prettier**: An opinionated code formatter that enforces a consistent style by parsing your code and reprinting it with its own rules.
+- **Storybook**: An open source tool for developing UI components in isolation for React, Vue, and Angular.
 
 ## Prerequisites
 
@@ -46,13 +47,27 @@ Fill your `.env` file with the following environment variables:
 VITE_MATCH_API_URL=http://localhost:3000/matching
 ```
 
+## Testing
+
+This project uses Vitest for unit testing. To run tests, execute:
+
+```bash
+yarn test
+```
+
+## Storybook
+
+To view and develop UI components in isolation, we utilize Storybook. Start Storybook with:
+
+```bash
+yarn storybook
+```
+
+Storybook runs on a separate port and allows you to browse a component library, view the different states of each component, and interactively develop and test components.
+
 ## Backend Setup
 
-Please visit backend [repository here](https://github.com/lucaslk10/fintary-part-3-backend).
-
-## Contributing
-
-We welcome contributions to the project. Please refer to the project's issues and pull request templates for more information on contributing.
+Please visit the backend [repository here](https://github.com/lucaslk10/fintary-part-3-backend).
 
 ## License
 
