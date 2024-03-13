@@ -1,25 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import MatchingPage from "./pages/MatchingPage";
-import { Typography } from "@material-tailwind/react";
-
-// Sample components for demonstration
-function Home() {
-  return <h2>Home Page</h2>;
-}
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+} from 'react-router-dom';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import MatchingPage from './pages/MatchingPage';
+import { Typography } from '@material-tailwind/react';
 
 function About() {
   return <h2>About Page</h2>;
 }
 
-// Your App component with routing
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Router>
       <div className="w-min-full">
@@ -32,12 +30,13 @@ function App() {
           </div>
           {/* Navigation Links */}
           <div className="flex gap-4 text-white">
-            <Link to="/">Home</Link>
+            <Link to="/step-1">Home</Link>
             <Link to="/about">About</Link>
           </div>
         </nav>
         <Routes>
-          <Route path="/" element={<MatchingPage />} />
+          <Route path="/" element={<Navigate replace to="/step-1" />} />
+          <Route path="/:step" element={<MatchingPage />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
